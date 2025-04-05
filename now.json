@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "dystopian-tic-tac-toe",
+  "builds": [
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "*.css", "use": "@vercel/static" },
+    { "src": "*.js", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/styles.css", "dest": "/styles.css" },
+    { "src": "/script.js", "dest": "/script.js" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+} 
