@@ -28,4 +28,12 @@ A browser-based Tic-Tac-Toe game with a dystopian UI theme.
 
 ## Live Demo
 
-The game is deployed on Vercel and can be played [here](https://tic-tac-toe-sharathshanmukh.vercel.app/). 
+The game is deployed on Vercel and can be played [here](https://tic-tac-toe-sharathshanmukh.vercel.app/).
+
+## Deployment
+
+This project is deployed using Vercel:
+
+1. The repository is hosted on GitHub at [sharathshanmukh/Tic-Tac-Toe](https://github.com/sharathshanmukh/Tic-Tac-Toe)
+2. Automatic deployments are set up through Vercel
+3. Any push to the main branch will trigger a new deployment 
