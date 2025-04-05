@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-shadow: 0 0 10px #00ff00;
+    letter-spacing: 2px;
+}
+
+.game-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: transparent;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 10px #00ff00;
+}
+
+button.active {
+    background-color: rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 15px #00ff00;
+}
+
+.status-message {
+    margin: 15px 0;
+    font-size: 18px;
+    min-height: 24px;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 30px auto;
+    max-width: 300px;
+}
+
+.cell {
+    aspect-ratio: 1;
+    background-color: rgba(0, 50, 0, 0.3);
+    border: 1px solid #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cell:hover {
+    background-color: rgba(0, 80, 0, 0.4);
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.cell.x::before {
+    content: 'X';
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.cell.o::before {
+    content: 'O';
+    color: #ff3300;
+    text-shadow: 0 0 10px #ff3300;
+}
+
+#reset-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+/* Winning animation */
+.cell.win {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px #00ff00;
+    }
+    50% {
+        box-shadow: 0 0 20px #00ff00;
+    }
+    100% {
+        box-shadow: 0 0 5px #00ff00;
+    }
+} 
